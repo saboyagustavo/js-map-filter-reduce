@@ -7,4 +7,13 @@ _Ministrado pelo [Caio Delgado](https://github.com/caioDelgado)_
 ## Assuntos gerais abordados no curso
 
 - [x] filter
+
 - [x] imutabilidade
+
+- [x] map
+
+- [x] forEach
+
+- [x] reduce
+
+  
