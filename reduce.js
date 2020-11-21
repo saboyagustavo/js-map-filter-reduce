@@ -39,6 +39,7 @@ const pets = [
 const petAgesAndWeight = pets.reduce(
     (acc, cur) => {
         // console.log(acc); -> debug
+        if (cur.kind !== 'dog') return acc;
         return {
             totalAges: acc.totalAges + cur.age,
             totalWeight: acc.totalWeight + cur.weight,
@@ -47,5 +48,5 @@ const petAgesAndWeight = pets.reduce(
     { totalAges: 0, totalWeight: 0 }
 );
 
-console.log(`somatória de idade dos pets é: ${petAgesAndWeight.totalAges} anos.`);
-console.log(`somatória de peso dos pets é: ${petAgesAndWeight.totalWeight} quilos.`);
+console.log(`somatória de idade dos cães é: ${petAgesAndWeight.totalAges} anos.`);
+console.log(`somatória de peso dos cães é: ${petAgesAndWeight.totalWeight} quilos.`);
