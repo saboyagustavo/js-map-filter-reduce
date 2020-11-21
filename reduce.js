@@ -35,7 +35,7 @@ const pets = [
         weight: 35,
     },
 ];
-
+/* 
 const petAgesAndWeight = pets.reduce(
     (acc, cur) => {
         // console.log(acc); -> debug
@@ -50,3 +50,19 @@ const petAgesAndWeight = pets.reduce(
 
 console.log(`somatória de idade dos cães é: ${petAgesAndWeight.totalAges} anos.`);
 console.log(`somatória de peso dos cães é: ${petAgesAndWeight.totalWeight} quilos.`);
+ */
+
+const dogsAgesAndWeight = pets
+    .filter((pet) => {
+        return pet.kind === 'dog';
+    })
+    .reduce(
+        (acc, cur) => {
+            return {
+                totalAges: acc.totalAges + cur.age,
+                totalWeight: acc.totalWeight + cur.weight,
+            };
+        },
+        { totalAges: 0, totalWeight: 0 }
+    );
+console.log(dogsAgesAndWeight);
